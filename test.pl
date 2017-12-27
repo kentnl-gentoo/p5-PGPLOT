@@ -22,9 +22,9 @@ else {$note = ''}
 if ($ENV{'PGPLOT_DEV'}) {
     $dev = $ENV{'PGPLOT_DEV'};
 } else {
-print "Default Device for plot tests [recommend /XSERVE] ? $note ";
+print "Default Device for plot tests [recommend /NULL] ? $note ";
 $dev = <STDIN>; chomp $dev;
-$dev = "/XSERVE" unless $dev=~/\w/;
+$dev = "/NULL" unless $dev=~/\w/;
 }
 
 if($dev eq '/PNG' && $^O =~ /mswin32/i) {system "del /F /Q *.png"};
